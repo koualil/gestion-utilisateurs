@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width==, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="users.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="./modal/styles.css">
+        <title>users</title>
+    </head>
+<body>
+    <header class="head">
+       <h1>gestion des utlisateurs</h1>
+        <button class="button-9 open_btn" role="button">Ajouter un utilisateur</button>
+
+    <div class="modale-container">
+            <div class="modale">
+                <h2 style="font-family: monospace;color: #8b8b95;margin-bottom: 1rem;">Remplir les informations d'utilisateur</h2>
+                <form method="POST" id="myform" class="Inputs"  >
+                       <div>
+                           <h3>nom :</h3> 
+                           <input hidden id="validValueId" type="number" name="id" placeholder="nom" />
+                           <input id="validValueNom" type="text" name="nom" placeholder="nom" required/>
+
+                       </div>
+                       <div>
+                           <h3>prenom :</h3>
+                           <input id="validValuePrenom"type="text" name="prenom" placeholder="prenom" required/>
+                       </div>
+                       <div>
+                        <h3>date de naissance :</h3>
+                         <input id="validValueDate"type="date" name="dateNaiss" placeholder="date de Naissnace" required/>
+                        </div>
+                        <div>
+                        <h3> email :</h3>
+                         <input id="validValueEmail"type="email" name="email" placeholder="email" required/>
+                        </div>
+                        <div>
+                        <h3> password :</h3>
+                         <input id="validValuePassword"type="password" name="password" placeholder="password" required/>
+                        </div>
+                        <div>
+                        <h3> situation familiale :</h3>
+                         <input id="validValueS"type="text" name="situationF" placeholder="situation Familiale" required/>
+                        </div>
+                        <div>
+                        <h3> sex :</h3>
+                          
+                         <select name="sex" id="validValueSex" >
+                             <option  ></option>
+                             <option value="femme">femme</option>
+                            <option value="homme">homme</option>
+                         </select>
+                        </div>
+                         <div class="TWObtn">
+                             <button class="button-9 addUsers"   role="button">Ajouter </button>
+                             <button type="reset" class="button-9  ferme" role="button">Annuler </button> 
+                         
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+    
+        <div class="conatinerTable" style="width: 80vw;margin: 60px auto;">
+
+            <table id="table_id" class="display" style="width: 80vw;">
+                <thead>
+                    <tr>
+                        <th>nom </th>
+                        <th>prenom</th>
+                        <th>date de Naissnace</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th>situationFamiliale</th>
+                        <th>sex</th>
+                        <th> </th>
+                        <th> </th>
+                     
+                </tr>
+            </thead>
+            <tbody class="DisplayLigne">
+           
+              
+            </tbody>
+        </table>
+  
+    </main>
+</body>
+<script > </script>
+<script src="./modal/app.js"></script>
+<script type="module" src="./users.js"></script>
+<script type="module" src="./initialForms.js"></script>
+ 
+<!-- <script type="module" src="./users.js"></script> -->
+</html>
